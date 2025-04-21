@@ -1,54 +1,110 @@
 .register-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  font-family: "Segoe UI", sans-serif;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .register-container h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   color: #333;
 }
 
 .register-form {
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
 }
 
-.register-form input,
-.register-form select {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.register-form button {
-  padding: 10px;
-  background-color: #4caf50;
-  color: white;
-  font-weight: bold;
+.form-group label {
+  font-weight: 500;
+  color: #555;
+}
+
+.required {
+  color: #e53935;
+  margin-left: 2px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 70px; 
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  background: none;
   border: none;
-  border-radius: 6px;
+  color: #4a90e2;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.3s;
 }
 
-.register-form button:hover {
-  background-color: #45a049;
+.toggle-password:hover {
+  color: #3a7bc8;
+}
+
+.submit-button {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background-color:  #45a049;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color:  #45a049;
+}
+
+.submit-button:disabled {
+  background-color:  #45a049;
+  cursor: not-allowed;
 }
 
 .error-message {
-  color: #e74c3c;
-  background-color: #fdecea;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  font-size: 14px;
-  text-align: center;
+  padding: 0.75rem;
+  background-color: #fdeded;
+  color: #d32f2f;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }

@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
+import { useState } from "react";
 const Cart = () => {
-    const [count, setCount] = useState(0);
-    return (
-        <div>
-            <h2>Cart Items: {count}</h2>
-            <button onClick={() => setCount(count + 1)}>Add Item</button>
-        </div>
-    );
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h2>Cart Items: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Add Item</button>
+    </div>
+  );
 };
 
 export default Cart;
